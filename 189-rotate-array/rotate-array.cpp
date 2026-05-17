@@ -20,5 +20,5 @@ public:
             nums[i] = ans[i];
         }
 
-    }
+    }   //using extra array 
 };
