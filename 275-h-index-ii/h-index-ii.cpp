@@ -2,20 +2,20 @@ class Solution {
 public:
     int hIndex(vector<int>& citations) {
         int n=citations.size();
-        int left=0;
-        int right=n-1;
-        while(left<=right){
-            int mid=left+(right-left)/2;
+        int l=0;
+        int r=n-1;
+        while(l<=r){
+            int mid=l+(r-l)/2;
             int h=n-mid;
             if(citations[mid]>=h){
-                right=mid-1;
+                r=mid-1;
             }
             else{
-                left=mid+1;
+                l=mid+1;
             }
         }
 
-        return n-left;
+        return n-l;
         
     }
 };
